@@ -1,0 +1,335 @@
+:root{
+  --color-texto:#FFFFFF;
+  --color-fondo:#020403;
+  --color-fondo-boton:#414344;
+}
+
+
+html{
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  margin: 0px 20% ;
+  background-color: var(--color-fondo);
+  color:var(--color-texto);
+  text-align:center;
+}
+header{
+  width: 100%;
+}
+/* .menu{
+  display: inline-block;
+} */
+header nav{
+  width: 90%;
+  width: 1000px;
+  margin: 30px auto;
+
+}
+.menu_bar{
+  display:none;
+}
+header nav ul{
+  overflow:hidden;
+  list-style: none;
+}
+
+ header nav ul li {
+  float:left
+ }
+header nav ul li a {
+  padding: 20px;
+  display: block;
+  text-decoration:none ;
+  color: var(--color-texto);
+  font-size: 8px;
+}
+header nav ul li a:hover {
+
+ background: var(--color-texto);
+ color: var(--color-fondo);
+ border-radius: 15%;
+}
+
+
+.grid-container{
+  padding: 10x;
+  text-align:center;
+}
+
+.retrato{
+ grid-area: retrato;
+ justify-self: center;
+}
+
+.Erick{
+  grid-area: Erick;
+}
+
+.Diseñador{
+  grid-area: Diseñador;
+
+}
+.instagram{
+  grid-area: instagram;
+  justify-self: center;
+}
+.linkedin{
+  grid-area: linkedin;
+  justify-self: center;
+}
+
+.twitter{
+  grid-area: twitter;
+  justify-self: center;
+}
+
+.grid-container{
+display: grid;
+gap: 10px;
+grid-template-areas: 
+"retrato    retrato    retrato "      
+"Erick      Erick      Erick"   
+"Diseñador  Diseñador  Diseñador" 
+"linkedin   instagram  twitter  "  
+  ;
+} 
+.acerca-container{
+  padding: 10px;
+  text-align:center;
+}
+
+.habilidades-container{
+  display:grid;
+  text-align:center;
+}
+
+.phone{
+  grid-area: phone;
+}
+
+.Habilidades{
+  grid-area: Habilidades;
+}
+
+.web{
+  grid-area: web;
+  justify-self: center;
+}
+.web2{
+  grid-area: web2;
+}
+.mobile{
+  grid-area: mobile;
+  justify-self: center;
+}
+.mobile2{
+  grid-area: mobile2;
+}
+.material{
+  grid-area: material;
+  justify-self: center;
+
+}
+.material2{
+  grid-area: material2;
+}
+
+.motion{
+  grid-area: motion;
+  justify-self: center;
+}
+.motion2{
+  grid-area: motion2;
+}
+.habilidades-container{
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+  "Habilidades Habilidades"
+  "mobile      motion "
+  "web2        mobile2"
+  "material    web "
+  "material2   motion2 "
+  ;
+}
+.Experiencia-container{
+  /* padding: 10px; */
+  text-align:center;
+}
+
+.Experiencia{
+  grid-area: Experiencia;
+}
+
+.fecha1{
+  grid-area: fecha1;
+  align-self: center;
+  /* justify-self: center; */
+}
+.descripcion-a{
+  grid-area: descripcion-a;
+ }
+
+.fecha2{
+  grid-area: fecha2;
+  align-self: center;
+  /* justify-self: center; */
+}
+
+.descripcion-e{
+  grid-area:  descripcion-e;
+}
+
+.fecha3{
+  grid-area: fecha3;
+  align-self: center;
+  /* justify-self: center; */
+}
+
+.descripcion-i{
+  grid-area: descripcion-i;
+
+}
+.eje{
+width: 200px;
+height: auto;
+}
+
+
+.Experiencia-container{
+  display: grid;
+  grid-template-areas: 
+  "Experiencia  Experiencia"
+  "fecha1       descripcion-a"
+  "fecha2       descripcion-e"
+  "fecha3       descripcion-i"
+    ;
+}
+
+
+.Portafolio-containe{
+  padding: 10x;
+  text-align:center;
+}
+
+.Portafolio{
+  grid-area: Portafolio;
+  justify-self: center;
+  }
+
+.ejemplo1{
+  grid-area: ejemplo1;
+  justify-self: center;
+}
+
+.ejemplo2{
+  grid-area: ejemplo2;
+  justify-self: center;
+}
+
+.ejemplo3{
+  grid-area: ejemplo3;
+  justify-self: center;
+}
+
+.Portafolio-containe{
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+  "Portafolio    Portafolio    Portafolio "      
+  "ejemplo1      ejemplo2      ejemplo3"   
+  ;
+}
+
+.Contacto-container{
+  padding: 10x;
+  text-align:center;
+}
+.Contacto{
+  grid-area: Contacto;
+  justify-self: center;
+}
+
+
+.phone{
+  grid-area: phone;
+  justify-self: center;
+}
+.phone1{
+  grid-area: phone1;
+  justify-self: center;
+}
+.phone2{
+  grid-area: phone2;
+  justify-self: center;
+}
+.mail{
+  grid-area: mail;
+  justify-self: center;
+}
+.mail1{
+  grid-area: mail1;
+  justify-self: center;
+}
+.mail2{
+  grid-area: mail2;
+  justify-self: center;
+}
+.Contacto-container{
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+  "Contacto    Contacto"
+  "phone       mail" 
+  "phone1      mail1"  
+  ;
+}
+
+@media screen and (max-width: 520px){
+ 
+
+
+  .habilidades-container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "Habilidades "
+    "mobile  " 
+    "mobile2"
+    "web  "
+    "web2 "
+    "material  "
+    "material2 "
+    "motion"
+    "motion2"
+    
+    ;
+  }
+  
+
+  .Portafolio-containe{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "Portafolio "      
+    "ejemplo1 " 
+    "ejemplo2 "
+    "ejemplo3 "  
+    ;
+  }
+
+  .Contacto-container{
+    display: grid;
+    gap: 10px;
+    font-size:8px;
+    grid-template-areas: 
+    "Contacto    Contacto"
+    "phone       mail" 
+    "phone1      mail1"  
+    ;
+  }
+}

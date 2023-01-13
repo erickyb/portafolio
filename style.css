@@ -2,14 +2,85 @@
   --color-texto:#FFFFFF;
   --color-fondo:#020403;
   --color-fondo-boton:#414344;
+
+  --z-fixed: 100;
 }
 
+:root {
+  --header-height: 3.5rem;
+  /*========== COLORS ==========*/
+  --first-color: #000;
+  --second-color: #fff;
+  --body-color: #fff;
+  --text-color: #000;
+  --link-color: #000;
+  --button-color: transparent;
 
-html{
-  justify-self: center;
+  /*========== FONTS ==========*/
+  --body-font: 'Source Sans 3', sans-serif;
+  --biggest-text: 3rem;
+  --big-text: 2.25rem;
+  --h1-text: 1.5rem;
+  --h2-text: 1.25rem;
+  --h3-text: 1rem;
+  --normal-text: .938rem;
+  --small-text: .813rem;
+  --smaller-text: .75rem;
+
+  /*========== FONT WEIGHT ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== SPACING =====*/
+  --m-1: .5rem;
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+  --m-4: 2rem;
+  --m-5: 2.5rem;
+  --m-6: 3rem;
+
+  /*========== Z INDEX ==========*/
+  --z-fixed: 100;
+  --z-menu: 105;
+}
+
+/*========== TYPOGRAPHY ==========*/
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-text: 6rem;
+    --big-text: 4rem;
+    --h1-text: 2.25rem;
+    --h2-text: 1.5rem;
+    --h3-text: 1.25rem;
+    --normal-text: 1rem;
+    --small-text: .875rem;
+    --smaller-text: .813rem;
+  }
+}
+
+/*==============================
+  2. BASE
+==============================*/
+html {
   height: 100%;
-  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
+
+
 
 body{
   margin: 0px 20% ;
@@ -17,90 +88,95 @@ body{
   color:var(--color-texto);
   text-align:center;
 }
-header{
+/* .header-container{
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgb(248, 246, 246), 0px 8px 12px rgb(226, 219, 219);
+  transition: background .3s;
+} */
+
+main{
+
+  margin-top: 75px;
 }
 /* .menu{
   display: inline-block;
 } */
-header nav{
-  width: 90%;
-  width: 1000px;
-  margin: 30px auto;
 
-}
-.menu_bar{
-  display:none;
-}
-header nav ul{
-  overflow:hidden;
-  list-style: none;
+.section-title {
+  font-size: var(--h2-text);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--m-2);
 }
 
- header nav ul li {
-  float:left
- }
-header nav ul li a {
-  padding: 20px;
-  display: block;
-  text-decoration:none ;
-  color: var(--color-texto);
-  font-size: 8px;
-}
-header nav ul li a:hover {
-
- background: var(--color-texto);
- color: var(--color-fondo);
- border-radius: 15%;
+.section-subtitle {
+  font-size: var(--normal-text);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--m-2);
 }
 
-
-.grid-container{
-  padding: 10x;
-  text-align:center;
+.grid--container {
+  max-width: 1024px;
+  margin: 0 var(--m-2);
+  display: grid;
 }
 
-.retrato{
- grid-area: retrato;
- justify-self: center;
+.button {
+  appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 10px 12px;
+  border-width: 0;
+  border-radius: 10px;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: .3s;
 }
 
-.Erick{
-  grid-area: Erick;
+.button--icon {
+  font-size: 1.25rem;
+  line-height: inherit;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, .08), 0px 8px 12px rgb(0, 0, 0, .04);
+  transition: background .3s;
 }
 
-.Diseñador{
-  grid-area: Diseñador;
-
-}
-.instagram{
-  grid-area: instagram;
-  justify-self: center;
-}
-.linkedin{
-  grid-area: linkedin;
-  justify-self: center;
+.navbar {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.twitter{
-  grid-area: twitter;
-  justify-self: center;
+.navbar__logo {
+  font-size: var(--h1-text);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: var(--m-1);
 }
 
-.grid-container{
-display: grid;
-gap: 10px;
-grid-template-areas: 
-"retrato    retrato    retrato "      
-"Erick      Erick      Erick"   
-"Diseñador  Diseñador  Diseñador" 
-"linkedin   instagram  twitter  "  
-  ;
-} 
-.acerca-container{
-  padding: 10px;
-  text-align:center;
-}
 
 .habilidades-container{
   display:grid;
@@ -289,9 +365,70 @@ height: auto;
   ;
 }
 
-@media screen and (max-width: 520px){
- 
+.navbar__close {
+  position: absolute;
+  top: var(--m-2);
+  right: var(--m-2);
 
+}
+.navbar__link{
+  text-decoration:none ;
+  font-size: 1.2rem;
+  color :#f1f1f1;
+}
+.navbar__list {
+  display: flex;
+
+  /* flex-direction: column;
+  padding-top: calc(var(--m-6) + 1.5rem); */
+}
+
+.navbar__item {
+  font-size: var(--h2-text);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  padding: var(--m-2) var(--m-4);
+}
+
+
+ .navbar__toggle{
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    .navbar__menu {
+      position: fixed;
+      background-color: rgb(80, 11, 11);
+      top: 0;
+      left: -100%;
+      width: 85vw;
+      height: 100vh;
+      z-index: var(--z-menu);
+      transition: .3s;
+    }
+    .navbar__link{
+      color:#FFFFFF
+
+
+    }
+    .show--menu {
+      left: 0;
+    }
+    .navbar__toggle{
+      display: flex;
+    }
+    .navbar__list {
+      display: flex;
+      flex-direction: column;
+      padding-top: calc(var(--m-6) + 1.5rem);
+      list-style:none;  
+      margin:0;
+      padding:0;
+      align-items: center;
+      justify-content: center;
+    }
+    
+ 
+  
 
   .habilidades-container{
     display: grid;
